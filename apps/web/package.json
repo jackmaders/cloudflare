@@ -8,14 +8,21 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:deploy": "opennextjs-cloudflare deploy",
+    "cf:upload": "opennextjs-cloudflare upload",
+    "payload": "payload"
   },
   "dependencies": {
     "@cloudflare/shared": "workspace:*",
     "@opennextjs/cloudflare": "^1.16.5",
+    "@payloadcms/db-d1-sqlite": "^3.77.0",
+    "@payloadcms/next": "^3.77.0",
+    "@payloadcms/richtext-lexical": "^3.77.0",
+    "@payloadcms/ui": "^3.77.0",
+    "graphql": "^16.12.0",
     "next": "16.1.6",
+    "payload": "^3.77.0",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

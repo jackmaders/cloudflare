@@ -1,15 +1,22 @@
 {
-  "$schema": "./node_modules/wrangler/config-schema.json",
-  "main": ".open-next/worker.js",
-  "name": "cloudflare-web",
-  "compatibility_date": "2026-02-20",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
-  "workers_dev": true,
-  "preview_urls": true,
-  "assets": {
-    "directory": ".open-next/assets",
-    "binding": "ASSETS"
-  }
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"main": ".open-next/worker.js",
+	"name": "cloudflare-web",
+	"compatibility_date": "2026-02-20",
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
+	"workers_dev": true,
+	"preview_urls": true,
+	"assets": {
+		"directory": ".open-next/assets",
+		"binding": "ASSETS"
+	},
+	"d1_databases": [
+		{
+			"binding": "payload_db",
+			"database_name": "payload-db",
+			"database_id": "ea2822a9-58a0-4c16-a985-8a2a01580932"
+		}
+	]
 }

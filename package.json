@@ -4,7 +4,11 @@
   "workspaces": [
     "apps/*",
     "packages/*"
-  ],
+  ],"scripts": {
+    "web:build": "bun install && bun run --filter \"@cloudflare/web\" cf:build",
+    "web:deploy": "bun run --filter \"@cloudflare/web\" cf:deploy",
+    "web:upload": "bun run --filter \"@cloudflare/web\" cf:upload"
+  },
   "devDependencies": {
     "@types/bun": "^1.3.9",
     "typescript": "^5"
